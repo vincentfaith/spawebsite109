@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurea Private Spa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animasi fade-in */
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fade-in 1s ease-out forwards; }
+    .animate-fade-in.delay-200 { animation-delay: 0.2s; }
+    .animate-fade-in.delay-400 { animation-delay: 0.4s; }
+
+    /* Hover subtle scale */
+    .hover-scale:hover { transform: scale(1.03); transition: transform 0.3s ease; }
+  </style>
+</head>
+<body class="bg-[#f8f1e7] text-[#8c7b6b] font-serif">
+
+<!-- NAVBAR -->
+<header class="border-b bg-[#f8f1e7]">
+  <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+    <div class="text-xl tracking-widest font-semibold">AUREA</div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-10 text-sm">
+      <a href="index.html" class="hover:opacity-70 font-semibold underline decoration-[#d9cbb7]">Home</a>
+      <a href="treatments.html" class="hover:opacity-70">Treatments</a>
+      <a href="packages.html" class="hover:opacity-70">Packages</a>
+      <a href="philosophy.html" class="hover:opacity-70">Philosophy</a>
+      <a href="booking.html" class="border px-6 py-2 bg-[#8c7b6b] text-[#f8f1e7] hover:bg-[#d9cbb7] transition">
+        Request Appointment
+      </a>
+    </nav>
+
+    <!-- Mobile Toggle -->
+    <button id="menu-btn" class="md:hidden">
+      <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t bg-[#f8f1e7]">
+    <nav class="flex flex-col px-6 py-8 space-y-6 text-sm">
+      <a href="index.html">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="packages.html">Packages</a>
+      <a href="philosophy.html">Philosophy</a>
+      <a href="booking.html" class="border px-6 py-3 text-center">Request Appointment</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="relative">
+  <img src="https://static.vecteezy.com/system/resources/previews/039/002/685/non_2x/ai-generated-beautiful-spa-composition-on-wooden-background-photo.jpg"
+       alt="Luxury spa interior" class="absolute inset-0 w-full h-full object-cover opacity-30">
+  <div class="relative max-w-4xl mx-auto px-6 py-32 text-center">
+    <h1 class="text-4xl md:text-5xl font-serif font-semibold mb-6 animate-fade-in">
+      A Private Sanctuary for Women Who Value Excellence
+    </h1>
+    <p class="text-lg mb-10 animate-fade-in delay-200">
+      Personalised spa treatments crafted for refined beauty & total relaxation.
+    </p>
+    <a href="booking.html"
+       class="inline-block bg-[#8c7b6b] text-[#f8f1e7] px-12 py-4 tracking-wide rounded hover:bg-[#d9cbb7] animate-fade-in delay-400">
+      Request Appointment
+    </a>
+  </div>
+</section>
+
+<!-- SIGNATURE TREATMENTS -->
+<section id="treatments" class="max-w-5xl mx-auto px-6 py-24">
+  <h2 class="text-3xl text-center mb-12">Signature Treatments</h2>
+  <div class="grid md:grid-cols-2 gap-12">
+    <div class="bg-[#f8f1e7] shadow-lg p-6 rounded-lg hover-scale">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.NuNk5LqQIRLFfJmo3aLwBwHaEK?pid=Api&P=0&h=180"
+           alt="Radiance Facial" class="rounded-lg mb-4">
+      <h3 class="text-2xl mb-2 font-semibold">The Radiance Facial</h3>
+      <p class="mb-4">Restore luminosity and calm stressed skin.</p>
+      <a href="booking.html" class="inline-block border px-6 py-2 bg-[#8c7b6b] text-[#f8f1e7] rounded hover:bg-[#d9cbb7] transition">
+        Book Now
+      </a>
+    </div>
+    <div class="bg-[#f8f1e7] shadow-lg p-6 rounded-lg hover-scale">
+      <img src="https://cdn.try.be/12249/0cc22273-6e54-46e3-8a2e-90ea43723097.jpg"
+           alt="Deep Serenity Massage" class="rounded-lg mb-4">
+      <h3 class="text-2xl mb-2 font-semibold">Deep Serenity Massage</h3>
+      <p class="mb-4">Slow, intentional massage to release deep tension.</p>
+      <a href="booking.html" class="inline-block border px-6 py-2 bg-[#8c7b6b] text-[#f8f1e7] rounded hover:bg-[#d9cbb7] transition">
+        Book Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="max-w-3xl mx-auto px-6 py-24 text-center">
+  <h2 class="text-3xl mb-12">What Our Clients Say</h2>
+  <div class="space-y-12 italic">
+    <p>“Every visit feels intentional and private.”
+      <span class="block text-sm not-italic">— S, Bangsar</span>
+    </p>
+    <p>“I finally found a place that understands my skin.”
+      <span class="block text-sm not-italic">— A, Kuala Lumpur</span>
+    </p>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section id="booking" class="max-w-xl mx-auto px-6 py-24 text-center">
+  <h2 class="text-3xl mb-6">Request Appointment</h2>
+  <p class="mb-8">Limited daily guests. Personalised attention for every visitor.</p>
+  <a href="https://wa.me/60123456789"
+     class="block bg-[#8c7b6b] text-[#f8f1e7] px-10 py-5 text-lg rounded hover:bg-[#d9cbb7] transition">
+    Message Us on WhatsApp
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t py-10 text-center text-sm text-[#8c7b6b]">
+  © 2026 Aurea Private Spa. All rights reserved.
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+</script>
+</body>
+</html>

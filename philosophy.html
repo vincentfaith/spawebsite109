@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Philosophy | Aurea</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fade-in 1s ease-out forwards; }
+    .animate-fade-in.delay-200 { animation-delay: 0.2s; }
+    .animate-fade-in.delay-400 { animation-delay: 0.4s; }
+  </style>
+</head>
+<body class="bg-[#f8f1e7] text-[#8c7b6b] font-serif">
+
+<!-- NAVBAR -->
+<header class="border-b bg-[#f8f1e7]">
+  <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+    <div class="text-xl tracking-widest font-semibold">AUREA</div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-10 text-sm">
+      <a href="index.html" class="hover:opacity-70">Home</a>
+      <a href="treatments.html" class="hover:opacity-70">Treatments</a>
+      <a href="packages.html" class="hover:opacity-70">Packages</a>
+      <a href="philosophy.html" class="hover:opacity-70 font-semibold underline decoration-[#d9cbb7]">Philosophy</a>
+      <a href="booking.html" class="border px-6 py-2 bg-[#8c7b6b] text-[#f8f1e7] hover:bg-[#d9cbb7] transition">
+        Request Appointment
+      </a>
+    </nav>
+
+    <!-- Mobile Toggle -->
+    <button id="menu-btn" class="md:hidden">
+      <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t bg-[#f8f1e7]">
+    <nav class="flex flex-col px-6 py-8 space-y-6 text-sm">
+      <a href="index.html">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="packages.html">Packages</a>
+      <a href="philosophy.html">Philosophy</a>
+      <a href="booking.html" class="border px-6 py-3 text-center">Request Appointment</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO / PHILOSOPHY -->
+<section class="relative">
+  <img src="https://images.unsplash.com/photo-1600180758895-58a2f71ff5b3?auto=format&fit=crop&w=1400&q=80"
+       alt="Luxury spa philosophy" class="absolute inset-0 w-full h-full object-cover opacity-25">
+  <div class="relative max-w-3xl mx-auto px-6 py-32 text-center">
+    <h1 class="text-4xl md:text-5xl font-serif font-semibold mb-6 animate-fade-in">
+      Our Philosophy
+    </h1>
+    <p class="text-lg mb-10 animate-fade-in delay-200">
+      Luxury is not excess — it is precision, care, and intention. Every treatment is personalised and never rushed.
+    </p>
+    <blockquote class="italic text-[#8c7b6b] text-lg mb-10 animate-fade-in delay-400">
+      “Aurea is a sanctuary for women who value thoughtful indulgence and wellbeing.”
+    </blockquote>
+    <a href="booking.html"
+       class="inline-block bg-[#8c7b6b] text-[#f8f1e7] px-12 py-4 tracking-wide rounded hover:bg-[#d9cbb7] animate-fade-in delay-400">
+      Begin Your Journey
+    </a>
+  </div>
+</section>
+
+<!-- VALUES / FEATURE HIGHLIGHTS -->
+<section class="max-w-5xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-12 text-center">
+  <div class="bg-[#f8f1e7] shadow p-6 rounded-lg animate-fade-in">
+    <h3 class="text-2xl font-semibold mb-4">Personalised Care</h3>
+    <p>Each treatment is uniquely tailored to your skin, body, and preferences.</p>
+  </div>
+  <div class="bg-[#f8f1e7] shadow p-6 rounded-lg animate-fade-in delay-200">
+    <h3 class="text-2xl font-semibold mb-4">Intention & Precision</h3>
+    <p>Every step is carefully designed to maximise relaxation and results.</p>
+  </div>
+  <div class="bg-[#f8f1e7] shadow p-6 rounded-lg animate-fade-in delay-400">
+    <h3 class="text-2xl font-semibold mb-4">Exclusivity</h3>
+    <p>We welcome a limited number of guests daily to maintain a serene environment.</p>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section id="booking" class="max-w-xl mx-auto px-6 py-24 text-center">
+  <h2 class="text-3xl mb-6">Request Appointment</h2>
+  <p class="mb-8">Enjoy personalised attention in a private, tranquil setting.</p>
+  <a href="https://wa.me/60123456789"
+     class="block bg-[#8c7b6b] text-[#f8f1e7] px-10 py-5 text-lg rounded hover:bg-[#d9cbb7] transition">
+    Message Us on WhatsApp
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t py-10 text-center text-sm text-[#8c7b6b]">
+  © 2026 Aurea Private Spa. All rights reserved.
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+</script>
+
+</body>
+</html>
